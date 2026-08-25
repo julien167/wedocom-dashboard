@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEDOCOM — Suivi d'activité</title>
+<meta name="description" content="Dashboard de suivi d'activité et de charge de l'équipe WEDOCOM, connecté en direct au CRA Google Sheets.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__brand">
+    <span class="topbar__mark" aria-hidden="true"></span>
+    <h1 class="topbar__title">WEDOCOM <span>· Suivi d'activité</span></h1>
+  </div>
+  <div class="topbar__meta">
+    <span><span class="sync-dot" id="syncDot"></span><span id="syncLabel">Connexion…</span></span>
+    <button class="btn-refresh" id="refreshBtn">Rafraîchir</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="app">
+    <div class="state-panel"><div class="state-panel__title">Chargement du CRA…</div></div>
+  </div>
+</main>
+
+<footer class="foot">
+  Données lues en direct depuis le Google Sheet « CRA-WEDOCOM », onglet Dashboard.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
